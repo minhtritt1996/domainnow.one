@@ -1,0 +1,92 @@
+.page_wrap.with_bg {
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.page_wrap.with_bg.contain_size {
+  background-repeat: repeat;
+  background-position: top center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+.page_wrap.with_bg.fixed {
+  background-attachment: fixed;
+}
+.page_wrap.with_bg .page_content_wrap {
+  background-color: transparent;
+}
+.page_wrap.with_bg [class*="scheme_"].top_panel {
+  background-color: transparent;
+}
+
+.page_wrap.with_bg_fixed .page_content_wrap {
+  background-color: transparent;
+}
+.page_wrap.with_bg_fixed [class*="scheme_"].top_panel {
+  background-color: transparent;
+}
+.page_wrap.with_bg_fixed .custom_bg_fixed {
+  display: block;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.page_wrap.with_bg_fixed .custom_bg_fixed.contain_size {
+  background-repeat: repeat;
+  background-position: top center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.extra-backlight.backlight-on .elementor-heading-title {
+  color: var(--theme-color-text_dark) !important;
+}
+
+.sc_icons_fill .sc_icons_item {
+  background-color: var(--theme-color-bg_color);
+}
+
+#style-8.mc4wp-form .mc4wp-form-fields input[type="email"],
+#style-9.mc4wp-form .mc4wp-form-fields input[type="email"] {
+  border-color: var(--theme-color-bd_color);
+}
+
+div.wpcf7 .form-style-6 .wpcf7-submit-style .submit-style-in {
+  background-color: var(--theme-color-text_link);
+}
+div.wpcf7 .form-style-6 .wpcf7-submit-style:active .wpcf7-submit + .submit-style-in, div.wpcf7 .form-style-6 .wpcf7-submit-style:focus .wpcf7-submit + .submit-style-in, div.wpcf7 .form-style-6 .wpcf7-submit-style:hover .wpcf7-submit + .submit-style-in {
+  background-color: var(--theme-color-text_hover);
+}
+
+.elementor-accordion .elementor-accordion-icon {
+  font-size: 15px;
+  line-height: 1.5em;
+}
+.elementor-accordion .elementor-accordion-icon-closed i.fa-plus:before,
+.elementor-accordion .elementor-accordion-icon-opened i.fa-minus:before {
+  font-weight: 700;
+}
+
+@media (max-width: 1279px) {
+  footer .sc_title .sc_item_title_text br {
+    display: inline;
+  }
+}
+@media (max-width: 479px) {
+  footer .sc_title .sc_item_title_text br {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=skin-upgrade-style.css.map */
