@@ -1,0 +1,116 @@
+@import "../../css/_mixins.scss";
+@import "../../css/_theme-vars.scss";
+@import "css/_skin-vars.scss";
+
+//---general styles
+//--background image
+.page_wrap.with_bg {
+	background-repeat: no-repeat;
+	background-position: top center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	&.contain_size {
+		background-repeat: repeat;
+		background-position: top center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+	&.fixed {
+		background-attachment: fixed;
+	}
+	.page_content_wrap {
+		background-color: transparent;
+	}
+	[class*="scheme_"].top_panel {
+		background-color: transparent;
+	}
+}
+//-with image fixed
+.page_wrap.with_bg_fixed {
+	.page_content_wrap {
+		background-color: transparent;
+	}
+	[class*="scheme_"].top_panel {
+		background-color: transparent;
+	}
+	.custom_bg_fixed {
+		display: block;
+		position: fixed;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: top center;
+		-webkit-background-size: cover;
+		background-size: cover;
+		&.contain_size {
+			background-repeat: repeat;
+			background-position: top center;
+			-webkit-background-size: contain;
+			background-size: contain;
+		}
+	}
+}
+
+//---custom  styles
+//--extra backgraund title
+.extra-backlight.backlight-on .elementor-heading-title {
+	color: var(--theme-color-text_dark) !important;
+}
+
+//---widgets styles
+//--icons -fill styles
+.sc_icons_fill .sc_icons_item {
+	background-color: var(--theme-color-bg_color);
+}
+//--mailChimpForm -style 8/9
+#style-8.mc4wp-form .mc4wp-form-fields input[type="email"],
+#style-9.mc4wp-form .mc4wp-form-fields input[type="email"] {
+	border-color: var(--theme-color-bd_color);
+}
+//--contactForm7 -style 6
+div.wpcf7 .form-style-6 .wpcf7-submit-style {
+	.submit-style-in {
+		background-color: var(--theme-color-text_link);
+	}
+	&:active,
+	&:focus,
+	&:hover {
+		.wpcf7-submit + .submit-style-in {
+			background-color: var(--theme-color-text_hover);
+		}
+	}
+}
+//--elementor accordion
+.elementor-accordion {
+	.elementor-accordion-icon {
+		font-size: 15px;
+		line-height: 1.5em;
+	}
+	.elementor-accordion-icon-closed i.fa-plus:before,
+	.elementor-accordion-icon-opened i.fa-minus:before {
+		font-weight: 700;
+	}
+}
+
+
+
+//--responsive styles
+//@mixin theme--lg()
+@media #{$media_lg} {
+	footer .sc_title .sc_item_title_text br {
+		display: inline;
+	}
+}
+
+//@mixin theme--sm()
+@media #{$media_xs} {
+	footer .sc_title .sc_item_title_text br {
+		display: none;
+	}
+}

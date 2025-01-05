@@ -1,0 +1,94 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+//@mixin theme--lg()
+@media #{$media_lg} {
+    .entry .entry-content .event-tickets .tribe-tickets__tickets-form,
+    .tribe-common.event-tickets .tribe-tickets__tickets-form,
+    .event-tickets.tribe-common .tribe-tickets__rsvp-wrapper {
+        max-width: 100%;
+    }
+    //--back btn
+    .tribe-back a {
+        font-size: 16px;
+    }
+}
+
+//@mixin theme--sm()
+@media #{$media_sm} {
+    .event-tickets.tribe-common {
+        .tribe-tickets__rsvp-form-wrapper {
+            padding: 1.4em;
+        }
+        .tribe-tickets__rsvp-actions-wrapper {
+            border-left: none;
+        }
+    }
+    .tribe-common.event-tickets .tribe-tickets__tickets-form {
+        padding: 1.4em;
+    }
+    .event-tickets {
+        .tribe-tickets__rsvp-actions {
+            padding-top: var(--tec-spacer-10);
+            padding-bottom: 0;
+        }
+        .tribe-tickets__rsvp-actions-rsvp-not-going {
+            margin-top: var(--tec-spacer-5);
+        }
+        .tribe-tickets__rsvp-form-buttons {
+            justify-content: flex-start;
+            button:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    .event-tickets .tec-tickets__attendees-list-item-attendee-details,
+    .tribe-common .tec-tickets__attendees-list-item-attendee-details {
+        align-self: flex-start;
+    }
+    //--btn
+    .tribe-common,
+    .event-tickets.tribe-common {
+        .tribe-common-c-btn,
+        button.tribe-common-c-btn,
+        .tribe-tickets__rsvp-form-button--cancel,
+        button.tribe-common-c-btn.tribe-common-c-btn--small {
+            padding: 15px 40px;
+            &:disabled,
+            &:hover,
+            &:focus {
+                padding: 15px 40px;
+            }
+        }
+    }
+    //--checkout page
+    .event-tickets,
+    .tribe-common {
+        .tribe-tickets__commerce-checkout-header {
+            display: inline-block;
+            text-align: left;
+        }
+        .tribe-tickets__commerce-checkout-header-link-back-to-event {
+            margin-left: 0;
+            margin-top: 1em;
+        }
+        .tribe-tickets__commerce-checkout-cart-item {
+            justify-content: flex-end;
+        }
+        .tribe-tickets__commerce-checkout-cart-item-details {
+            flex: 0 0 100%;
+            padding-bottom: 0.7em;
+        }
+        .tribe-tickets__commerce-checkout-cart-item-details-toggle {
+            margin-top: 5px;
+        }
+        .tribe-tickets__commerce-checkout-cart-item-price {
+            flex: 0 0 75px;
+            max-width: 75px;
+        }
+        .tribe-tickets__commerce-checkout-cart-item-quantity {
+            flex: 0 0 40px;
+        }
+    }
+}

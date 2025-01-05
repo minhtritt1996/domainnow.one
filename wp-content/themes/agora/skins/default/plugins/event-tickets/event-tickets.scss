@@ -1,0 +1,535 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+@import "../../../../css/_admin-colors.scss";
+
+
+
+//---ticket/RSVP styles
+.event-tickets.tribe-common {
+    --tec-font-family-sans-serif: var(--theme-font-p_font-family);
+    --e-a-border-radius: 0;
+    --tec-border-radius-default: 0;
+    //--form styles
+    .tribe-tickets__form {
+        input:not([type="submit"]) {
+            color: var(--theme-color-input_text) !important;
+        }
+        input:not([type="submit"]),
+        select,
+        textarea {
+            font-size: var(--theme-font-input_font-size);
+            line-height: var(--theme-font-input_line-height);
+            font-weight: var(--theme-font-input_font-weight);
+            color: var(--theme-color-input_dark) !important;
+            padding: 0.6em 0;
+            border-width: 0 0 1px 0;
+            border-color: var(--theme-color-input_bd_color);
+            &:focus {
+                outline: none !important;
+                border-color: var(--theme-color-input_dark);
+            }
+        }
+        input[placeholder]::-webkit-input-placeholder {
+            color: var(--theme-color-input_light);
+        }
+        textarea[placeholder]::-webkit-input-placeholder {
+            color: var(--theme-color-input_light);
+        }
+        input[placeholder]::-moz-placeholder {
+            color: var(--theme-color-input_light);
+        }
+        textarea[placeholder]::-moz-placeholder {
+            color: var(--theme-color-input_light);
+        }
+        input[placeholder]:-ms-input-placeholder {
+            color: var(--theme-color-input_light);
+        }
+        textarea[placeholder]:-ms-input-placeholder {
+            color: var(--theme-color-input_light);
+        }
+        input[placeholder]::placeholder {
+            color: var(--theme-color-input_light);
+        }
+        textarea[placeholder]::placeholder {
+            color: var(--theme-color-input_light);
+        }
+        .tribe-tickets__form-field {
+            padding-bottom: 2em;
+        }
+        .tribe-answer select.tribe-answer-select {
+            height: auto;
+            margin-left: 0;
+        }
+        label {
+            font-size: var(--theme-font-h6_font-size);
+            font-family: var(--theme-font-h6_font-family);
+            font-weight: var(--theme-font-h6_font-weight);
+            color: var(--theme-color-text_dark);
+        }
+    }
+    //--general styles
+    .tribe-common-b1 {
+        color: var(--theme-color-text);
+        font-family: var(--theme-font-h5_font-family);
+    }
+    .tribe-common-h2,
+    .tribe-common-h3,
+    .tribe-common-h4,
+    .tribe-common-h5,
+    .tribe-common-h6,
+    .tribe-common-h7 {
+        color: var(--theme-color-text_dark);
+        font-weight: var(--theme-font-h5_font-weight);
+    }
+    .tribe-common-h4 {
+        font-size: var(--theme-font-h4_font-size);
+        line-height: var(--theme-font-h4_line-height);
+    }
+    .tribe-common-h6--min-medium {
+        font-size: var(--theme-font-h6_font-size);
+    }
+}
+
+.tribe-common,
+.event-tickets.tribe-common {
+    button {
+        outline: none !important;
+    }
+    .tribe-common-c-btn,
+    button.tribe-common-c-btn,
+    .tribe-tickets__rsvp-form-button--cancel,
+    button.tribe-common-c-btn.tribe-common-c-btn--small {
+        width: auto;
+        font-size: var(--theme-font-button_font-size);
+        font-weight: var(--theme-font-button_font-weight);
+        text-transform: var(--theme-font-button_text-transform);
+        line-height: var(--theme-font-button_line-height);
+        padding: 18px 40px;
+        &:disabled,
+        &:hover,
+        &:focus {
+            width: auto;
+            padding: 18px 40px;
+        }
+    }
+    .tribe-common-c-btn,
+    button.tribe-common-c-btn,
+    button.tribe-common-c-btn.tribe-common-c-btn--small {
+        color: var(--theme-color-inverse_link);
+        background-color: var(--theme-color-text_link);
+        &:active,
+        &:hover,
+        &:focus {
+            color: var(--theme-color-inverse_link);
+            background-color: var(--theme-color-text_hover);
+        }
+    }
+    .tribe-tickets__rsvp-form-button--cancel {
+        color: var(--theme-color-inverse_hover);
+        border-color: var(--theme-color-text_dark_blend);
+        background-color: var(--theme-color-text_dark_blend);
+        &:hover {
+            color: var(--theme-color-bg_color);
+            border-color: var(--theme-color-text_dark);
+            background-color: var(--theme-color-text_dark);
+        }
+    }
+    .tribe-events-calendar-list__event-cost {
+        @include flex;
+        @include flex-align-items(center);
+        @include flex-wrap(wrap);
+        gap: 10px;
+    }
+    .tribe-events-c-small-cta__stock {
+        color: var(--theme-color-text_dark);
+        margin-left: 10px;
+    }
+    .tribe-tickets__commerce-checkout-header-link-back-to-event,
+    .tribe-common-cta--thin-alt {
+        font-family: var(--theme-font-h5_font-family);
+        @include font(12px, 20px, var(--theme-font-button_font-weight));
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        display: inline-flex;
+        padding: 13px 26px !important;
+        border: none !important;
+        color: var(--theme-color-inverse_link) !important;
+        background-color: var(--theme-color-text_link);
+        @include border-radius(0);
+        @include transition-all(0.3s);
+        &:hover {
+            background-color: var(--theme-color-text_hover);
+        }
+    }
+    .tribe-common-cta.tribe-common-cta--alt {
+        color: var(--theme-color-text_dark);
+        border-bottom: 1px solid currentColor;
+        @include transition-all(0.3s);
+        &:active,
+        &:hover {
+            border-bottom: 1px solid var(--theme-color-text_link);
+        }
+    }
+}
+
+
+//--RSVP form
+.event-tickets.tribe-common {
+    + .tribe-events.tribe-common {
+        margin-top: 30px;
+    }
+    .tribe-tickets__rsvp-wrapper {
+        max-width: 75%;
+        background-color: transparent;
+        border-color: var(--theme-color-bd_color);
+        @include border-radius(0);
+    }
+    .tribe-tickets__rsvp-description,
+    .tribe-tickets__rsvp-attendance-going {
+        font-family: var(--theme-font-p_font-weight);
+        font-size: 1rem;
+        line-height: 1.62em;
+        color: var(--theme-color-text);
+    }
+    .tribe-tickets__rsvp-availability,
+    .tribe-tickets__rsvp-attendance-going {
+        font-size: 1rem;
+        color: var(--theme-color-text_light);
+    }
+    .tribe-tickets__rsvp-availability-days-left,
+    .tribe-tickets__rsvp-availability-quantity {
+        color: var(--theme-color-text);
+    }
+    .tribe-tickets__rsvp-actions-wrapper {
+        border-left: 1px solid var(--theme-color-bd_color);
+        border-color: var(--theme-color-bd_color);
+    }
+    .tribe-tickets__rsvp-actions .tribe-common-c-btn {
+        max-width: unset;
+        width: auto;
+    }
+    .tribe-tickets__rsvp-actions-success {
+        margin-top: 5px;
+    }
+    .tribe-tickets__rsvp-actions-success-going-check-icon {
+        background-color: $success_color;
+    }
+    .tribe-tickets__rsvp-form-wrapper {
+        padding: 2.5em;
+    }
+    .tribe-tickets__rsvp-form-content {
+        margin-bottom: 0;
+    }
+    .tribe-tickets__rsvp-form-buttons {
+        padding-top: 0;
+    }
+    //--attendees list
+    .tec-tickets__attendees-list {
+        background-color: var(--theme-color-alter_bg_color);
+    }
+    .tec-tickets__attendees-list-item {
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: var(--theme-color-bd_color);
+        &:last-child {
+            border-bottom: 0;
+        }
+        .tec-tickets__attendees-list-item-attendee-details-name {
+            font-size: 1.2em;
+            font-family: var(--theme-font-h5_font-family);
+            font-weight: var(--theme-font-h5_font-weight);
+            color: var(--theme-color-text_dark);
+        }
+    }
+    .tribe-tickets__rsvp-actions-rsvp .tribe-tickets__rsvp-actions-button-not-going {
+        font-family: var(--theme-font-h6_font-family);
+        font-weight: var(--theme-font-h6_font-weight);
+        font-size: var(--theme-font-h6_font-size);
+        &:active,
+        &:focus,
+        &:hover {
+            color: var(--theme-color-text_link);
+            border-bottom-color: var(--theme-color-text_link);
+        }
+    }
+}
+//--ticket form
+.tribe-common.event-tickets,
+.entry .entry-content .event-tickets {
+    //-ticket
+    .tribe-tickets__tickets-form {
+        max-width: 75%;
+        padding: 2.1vw;
+        margin-top: 50px;
+        background-color: transparent;
+        border-color: var(--theme-color-bd_color);
+        @include border-radius(0);
+    }
+    .tribe-tickets__tickets-title {
+        margin-bottom: 24px;
+    }
+    .tribe-tickets__tickets-item {
+        padding: 15px 0 13px;
+        border-color: var(--theme-color-bd_color);
+        &[data-available="false"] {
+            opacity: 1;
+        }
+    }
+    .tribe-tickets__tickets-item-details-content {
+        font-size: 1rem;
+        line-height: 1.62em;
+        margin-bottom: 0;
+    }
+    .tribe-tickets__tickets-item-extra {
+        text-align: left;
+    }
+    .tribe-tickets__tickets-item-extra-price {
+        font-size: 1rem;
+        .tribe-tickets__tickets-original-price {
+            font-family: var(--theme-font-h6_font-family);
+            font-weight: var(--theme-font-h6_font-weight);
+            font-size: var(--theme-font-h6_font-size);
+            color: var(--theme-color-text);
+        }
+        .tribe-tickets__tickets-sale-price {
+            font-family: var(--theme-font-h6_font-family);
+            font-weight: var(--theme-font-h6_font-weight);
+            font-size: var(--theme-font-h6_font-size);
+            color: var(--theme-color-text_light);
+        }
+    }
+    .tribe-tickets__tickets-item-extra-available {
+        font-size: 1rem;
+        color: var(--theme-color-text_light);
+    }
+    .tribe-tickets__tickets-item-content-sale-label {
+        font-family: var(--theme-font-h6_font-family);
+        width: auto;
+        height: 25px;
+        min-height: 25px;
+        min-width: 50px;
+        max-width: 55%;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 0 12px;
+        @include border-radius(0);
+        color: var(--theme-color-inverse_link);
+        background-color: var(--theme-color-text_link);
+    }
+    .tribe-tickets__tickets-item-quantity {
+        font-size: 1rem;
+        .tribe-tickets__tickets-item-quantity-unavailable {
+            font-family: var(--theme-font-h6_font-family);
+            font-weight: var(--theme-font-h6_font-weight);
+            font-size: var(--theme-font-h6_font-size);
+            color: var(--theme-color-text_dark);
+        }
+    }
+    .tribe-tickets__tickets-item-quantity-add,
+    .tribe-tickets__tickets-item-quantity-remove {
+        padding: 0;
+        margin: 0;
+        color: var(--theme-color-text_dark);
+        font-size: 16px;
+        width: 1.5em;
+        &:hover,
+        &:focus {
+            color: var(--theme-color-text_link);
+        }
+    }
+    .tribe-tickets__tickets-footer-quantity-number,
+    .tribe-tickets__tickets-footer-total-number,
+    .tribe-tickets__tickets-footer-total-wrap {
+        font-family: var(--theme-font-h6_font-family);
+        font-weight: var(--theme-font-h6_font-weight);
+        font-size: var(--theme-font-h6_font-size);
+        color: var(--theme-color-text_dark);
+    }
+    .tribe-tickets__tickets-footer {
+        padding-top: 40px;
+        flex-wrap: wrap;
+        margin-bottom: -10px;
+        > * {
+            margin-bottom: 10px;
+        }
+        border-color: var(--theme-color-bd_color);
+        > .tribe-common-b2 {
+            font-size: 1rem;
+        }
+    }
+    .tribe-tickets__tickets-buy:disabled {
+        color: var(--theme-color-alter_dark) !important;
+        background-color: var(--theme-color-alter_bg_color) !important;
+    }
+}
+//--ticket checkout page
+.event-tickets,
+.tribe-common {
+    .tribe-tickets__commerce-checkout {
+        max-width: unset;
+    }
+    .tribe-tickets__commerce-checkout-header-title {
+        font-size: var(--theme-font-h3_font-size);
+    }
+    .tribe-tickets__commerce-checkout-cart-item-price .tec-tickets-price {
+        flex-wrap: wrap;
+        font-weight: var(--theme-font-h5_font-weight);
+        .tec-tickets-price__sale-price {
+            font-family: var(--theme-font-h6_font-family);
+            font-weight: var(--theme-font-h6_font-weight);
+            color: var(--theme-color-text_light);
+        }
+        .tec-tickets-price__regular-price {
+            font-size: 14px;
+            font-weight: var(--theme-font-h6_font-weight);
+            color: var(--theme-color-text);
+        }
+    }
+    .tribe-tickets__commerce-checkout-cart-item-quantity {
+        font-size: var(--theme-font-input_font-size);
+        line-height: var(--theme-font-input_line-height);
+        font-weight: var(--theme-font-input_font-weight) !important;
+        color: var(--theme-color-input_text);
+    }
+    .tribe-tickets__commerce-checkout-cart-empty {
+        margin-top: 1.5em;
+        margin-bottom: 0;
+    }
+    .tribe-tickets__commerce-checkout-header {
+        align-items: center;
+    }
+    .tribe-tickets__commerce-checkout-cart-footer {
+        &.tribe-common-b1 {
+            font-family: var(--theme-font-p_font-family);
+        }
+        .tribe-tickets__commerce-checkout-cart-footer-total-wrap,
+        .tribe-tickets__commerce-checkout-cart-footer-quantity-number {
+            font-family: var(--theme-font-h6_font-family);
+            font-weight: var(--theme-font-h6_font-weight);
+            font-size: var(--theme-font-h6_font-size);
+            color: var(--theme-color-text_dark);
+        }
+    }
+    .tribe-tickets__commerce-checkout-cart-footer,
+    .tribe-tickets__commerce-checkout-cart-item {
+        border-color: var(--theme-color-bd_color);
+    }
+    .tribe-tickets__commerce-checkout-cart-footer-quantity,
+    .tribe-tickets__commerce-checkout-cart-footer-total {
+        font-size: 1rem;
+        color: var(--theme-color-text);
+    }
+    .tribe-tickets__commerce-checkout-cart-footer-quantity-number,
+    .tribe-tickets__commerce-checkout-cart-footer-total-number,
+    .tribe-tickets__commerce-checkout-cart-footer-total-wrap {
+        color: var(--theme-color-text_dark);
+    }
+    .tribe-tickets__notice--error {
+        @include border-radius(0);
+        background-color: var(--theme-color-alter_bg_color);
+        h3 {
+            font-family: var(--theme-font-h5_font-family);
+            font-size: var(--theme-font-h5_font-size);
+            color: var(--theme-color-text_dark);
+        }
+        > * {
+            font-family: var(--theme-font-p_font-family);
+            font-weight: var(--theme-font-p_font-weight);
+            font-size: var(--theme-font-p_font-size);
+            color: var(--theme-color-text);
+        }
+        &:before {
+            content: "\e9cd";
+            color: var(--theme-color-text_dark);
+            font-family: "fontello";
+            line-height: 1;
+            background-image: none;
+        }
+    }
+    .tribe-tickets__commerce-checkout-cart-item-details-title {
+        font-size: var(--theme-font-h6_font-size);
+    }
+    .tribe-tickets__commerce-checkout-cart-item-details-description {
+        font-size: 1rem;
+    }
+    .tribe-tickets__commerce-checkout-cart-item-details-button-text {
+        font-size: 14px;
+    }
+    .tribe-tickets__commerce-checkout-cart-item-details-button--more:after {
+        border-color: var(--theme-color-text_dark) transparent transparent;
+    }
+    .tribe-tickets__commerce-checkout-cart-item-details-button--less:after {
+        border-color: transparent transparent var(--theme-color-text_dark);
+    }
+    .tribe-tickets__commerce-checkout-cart-item-subtotal {
+        font-family: var(--theme-font-h6_font-family);
+        font-weight: var(--theme-font-h6_font-weight) !important;
+        font-size: var(--theme-font-h6_font-size);
+        color: var(--theme-color-text_light);
+    }
+}
+//--rsvp page
+.tribe-rsvp {
+    .tec-tickets__my-tickets-list-title {
+        font-family: var(--theme-font-h5_font-family);
+        font-weight: var(--theme-font-h5_font-weight);
+        color: var(--theme-color-text_dark);
+    }
+}
+.tribe-rsvp-list > .tribe-item {
+    background-color: transparent;
+    border-color: var(--theme-color-bd_color);
+    &:last-child {
+        border-color: var(--theme-color-bd_color);
+    }
+    > div.list-attendee {
+        font-family: var(--theme-font-h5_font-family);
+        font-weight: var(--theme-font-h5_font-weight);
+        color: var(--theme-color-text_dark);
+    }
+}
+.sc_events.sc_events_alter {
+    .sc_events_item_price {
+        color: var(--theme-color-alter_dark);
+        position: static;
+        display: block;
+        padding: 0;
+        background-color: transparent;
+        min-width: unset;
+        min-height: unset;
+        margin-bottom: 0.5em;
+        .sc_events_item_price_text {
+            top: 0;
+        }
+    }
+    .sc_events_item_meta {
+        padding-right: 0;
+    }
+}
+
+//--events toolbox
+.tooltipster-box .tribe-events-c-small-cta__price {
+	display: block;
+	margin: 0.5em 0 0 0;
+}
+.user-details {
+    font-size: var(--theme-font-p_font-size);   
+}
+//-back btn
+.tribe-back a {
+    font-size: 18px;
+    font-family: var(--theme-font-h5_font-family);
+    font-weight: var(--theme-font-h5_font-weight);
+    color: var(--theme-color-text_dark);
+    &:hover {
+        color: var(--theme-color-text_link);
+    }
+}
+//--checkout
+.tribe-common .tribe-common-anchor-alt {
+    border-bottom-color: var(--theme-color-text_dark);
+}
