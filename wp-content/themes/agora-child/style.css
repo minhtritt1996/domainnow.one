@@ -1,63 +1,8 @@
-/*
-Theme Name: Agora Child Theme
-Template: agora
-Theme URI: https://agora.ancorathemes.com/
-Description: Agora Child Theme
-Author: AncoraThemes
-Author URI: https://ancorathemes.com/
-Version: 1.0.0
-Tested up to: 6.6
-Requires at least: 5.0
-Requires PHP: 7.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: classes, event, event theme, venue, meetup, events calendar, conference, event management, exhibition, expo, meeting, schedule, seminar, speakers, tickets, webinar
-Text Domain: agora
-*/
-
-
-/* =Child-Theme customization starts here
------------------------------------------------------------- */
-
-
-form button:not(.components-button), input[type="button"], input[type="reset"], input[type="submit"], .theme_button, .post_item .more-link, .wp-block-button__link, .sc_button:not(.sc_button_simple), .sc_form button, .sc_portfolio_preview_show .post_readmore {
-        --theme-color-text_link: #4361EE;
-    --theme-color-text_hover: #1E3FDB;
-    border-color: var(--theme-color-text_link);
-    background-color: var(--theme-color-text_link);
-  
-}
-.team_member_description_socials {
-    display: none;
-}
-.left_shift {
-    z-index: 5;
-    margin: 53px 0 0 -160px;
-    width: calc(100% + 160px) !important;
-    height: 100%;
-}
-.comments_close {
-    display: none;
-}
-.comments-area, .comment-respond, .comments-title {
-    display: none;
-}
-
-.slider_header_rs rs-column {
-    position: relative;
-}
-
-.slider_header_rs rs-column:before {
-    background: #F8F8F83D;
-    position: absolute;
-    top: -7%;
-    left: -55%;
-    content: '';
-    width: 100%;
-    height: 91%;
-}
-@media only screen and ( max-width:767px){
-	.slider_header_rs rs-column:before {
-	display:none
-		}
-}
+form button:not(.components-button), input[type="button"], input[type="reset"], input[type="submit"], .theme_button, .post_item .more-link, .wp-block-button__link, .sc_button:not(.sc_button_simple), .sc_form button, .sc_portfolio_preview_show .post_readmore {--theme-color-text_link: #4361ee;--theme-color-text_hover: #1e3fdb;border-color: var(--theme-color-text_link);background-color: var(--theme-color-text_link);}
+.team_member_description_socials {display: none;}
+.left_shift {z-index: 5;margin: 53px 0 0 -160px;width: calc(100% + 160px) !important;height: 100%;}
+.comments_close {display: none;}
+.comments-area, .comment-respond, .comments-title {display: none;}
+.slider_header_rs rs-column {position: relative;}
+.slider_header_rs rs-column:before {background: rgba(248,248,248,.24);position: absolute;top: -7%;left: -55%;content: "";width: 100%;height: 91%;}
+@media only screen and ( max-width:767px) {.slider_header_rs rs-column:before {display: none;}}
